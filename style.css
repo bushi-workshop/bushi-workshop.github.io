@@ -94,15 +94,9 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
+  grid-template-columns: 1.3fr 0.8fr;
   gap: 2rem;
-  align-items: start;
-}
-
-.hero-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  align-items: center;
 }
 
 .hero-blur {
@@ -190,29 +184,6 @@ a {
   background: rgba(255,255,255,0.08);
   color: white;
   border: 1px solid rgba(255,255,255,0.15);
-}
-
-.conference-logo-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 22px;
-  padding: 1rem;
-  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
-  text-align: center;
-}
-
-.conference-logo {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-  display: block;
-}
-
-.logo-caption {
-  margin: 0.75rem 0 0;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.72);
-  font-weight: 600;
 }
 
 .hero-panel {
@@ -579,9 +550,5 @@ a {
 
   .quick-stats {
     margin-top: 0;
-  }
-
-  .conference-logo {
-    max-width: 220px;
   }
 }
