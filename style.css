@@ -552,3 +552,25 @@ a {
     margin-top: 0;
   }
 }
+
+.conference-logo-wrap {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 0.9rem;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+  text-align: center;
+}
+
+.conference-logo {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .conference-logo {
+    max-width: 200px;
+  }
+}
