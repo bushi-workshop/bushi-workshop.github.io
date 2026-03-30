@@ -170,7 +170,7 @@ a:hover {
   gap: 1rem;
 }
 
-.conference-logo-wrap {
+/* .conference-logo-wrap {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 16px;
@@ -189,7 +189,7 @@ a:hover {
   color: rgba(255,255,255,0.82);
   font-size: 0.9rem;
   font-weight: 600;
-}
+} */
 
 .mini-card {
   background: rgba(255,255,255,0.1);
@@ -399,5 +399,28 @@ a:hover {
 
   .footer-wrap {
     flex-direction: column;
+  }
+}
+
+.conference-logo-corner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.conference-logo-small {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .conference-logo-corner {
+    justify-content: center;
+  }
+
+  .conference-logo-small {
+    max-width: 140px;
   }
 }
