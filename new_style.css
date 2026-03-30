@@ -393,8 +393,8 @@ a:hover {
     padding: 4rem 0;
   }
 
-  .conference-logo {
-    max-width: 220px;
+  .conference-logo-small {
+    max-width: 140px;
   }
 
   .footer-wrap {
