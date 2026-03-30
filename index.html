@@ -1,362 +1,554 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BU-SHI Workshop | RO-MAN 2026</title>
-  <meta
-    name="description"
-    content="BU-SHI: Broadening the Users – A Cross-Disciplinary Roadmap for Social Humanoid Interaction, IEEE RO-MAN 2026 Workshop."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#home" class="brand">BU-SHI 2026</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#topics">Topics</a>
-        <a href="#cfp">Call</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#program">Program</a>
-        <a href="#organizers">Organizers</a>
-        <a href="#accessibility">Accessibility</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+:root {
+  --bg: #0b1020;
+  --bg-soft: #111830;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-2: #f7f9ff;
+  --text: #0f172a;
+  --muted: #5b6478;
+  --line: rgba(255, 255, 255, 0.14);
+  --primary: #5b7cff;
+  --primary-dark: #3954d6;
+  --accent: #23c7b7;
+  --accent-2: #ffb84d;
+  --white: #ffffff;
+  --shadow: 0 16px 40px rgba(12, 18, 38, 0.18);
+  --radius: 22px;
+  --maxw: 1160px;
+}
 
-  <section class="hero" id="home">
-    <div class="hero-blur hero-blur-1"></div>
-    <div class="hero-blur hero-blur-2"></div>
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">IEEE RO-MAN 2026 Workshop</p>
-        <h1>BU-SHI</h1>
-        <p class="hero-subtitle">
-          Broadening the Users – A Cross-Disciplinary Roadmap for Social Humanoid Interaction
-        </p>
-        <p class="hero-meta">
-          Half-Day Workshop · August 28, 2026 · Kitakyushu, Japan
-        </p>
+* {
+  box-sizing: border-box;
+}
 
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#cfp">Call for Participation</a>
-          <a class="btn btn-secondary" href="#speakers">Meet the Speakers</a>
-        </div>
-      </div>
+html {
+  scroll-behavior: smooth;
+}
 
-      <div class="hero-panel">
-        <div class="mini-card">
-          <span class="mini-label">Theme</span>
-          <strong>Inclusive social humanoids</strong>
-        </div>
-        <div class="mini-card">
-          <span class="mini-label">Focus</span>
-          <strong>Multimodal, embodied, diversity-aware interaction</strong>
-        </div>
-        <div class="mini-card">
-          <span class="mini-label">Venue</span>
-          <strong>RO-MAN 2026 · Kitakyushu</strong>
-        </div>
-      </div>
-    </div>
-  </section>
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(91, 124, 255, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(35, 199, 183, 0.10), transparent 30%),
+    linear-gradient(180deg, #0b1020 0%, #121a34 22%, #f5f8ff 22%, #f5f8ff 100%);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-  <section class="quick-stats">
-    <div class="container stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">1–2</div>
-        <div class="stat-label">page extended abstracts</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">20–40</div>
-        <div class="stat-label">expected participants</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">6–8</div>
-        <div class="stat-label">poster presentations</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">5+</div>
-        <div class="stat-label">cross-disciplinary panel voices</div>
-      </div>
-    </div>
-  </section>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  <main>
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Overview</span>
-          <h2>Why this workshop?</h2>
-          <p class="section-intro">
-            As humanoid robots move toward deployment in real social environments, the key question is no longer only what they can do, but who they are designed for.
-          </p>
-        </div>
+.container {
+  width: min(var(--maxw), calc(100% - 2rem));
+  margin: 0 auto;
+}
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Beyond the default user</h3>
-            <p>
-              BU-SHI challenges narrow design assumptions by centering diverse users, communication styles, cultural backgrounds, and physical or cognitive conditions.
-            </p>
-          </article>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(11, 16, 32, 0.72);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-          <article class="feature-card">
-            <h3>More than one modality</h3>
-            <p>
-              We bring together speech, gesture, gaze, embodied communication, multimodal dialogue, and sign-language-based interaction within a broader humanoid framework.
-            </p>
-          </article>
+.nav-wrap {
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
 
-          <article class="feature-card">
-            <h3>Roadmap-oriented discussion</h3>
-            <p>
-              The goal is not a single technical fix, but a cross-disciplinary roadmap for socially deployable humanoids across robotics, AI, HRI, language, and deployment studies.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+.brand {
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+}
 
-    <section class="section section-alt" id="topics">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Scope</span>
-          <h2>Topics of interest</h2>
-        </div>
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.95rem;
+}
 
-        <div class="chip-grid">
-          <span class="topic-chip">Social interaction design</span>
-          <span class="topic-chip">Multimodal communication</span>
-          <span class="topic-chip">Speech, gesture, gaze, embodiment</span>
-          <span class="topic-chip">Adaptive interaction</span>
-          <span class="topic-chip">Cross-cultural communication</span>
-          <span class="topic-chip">LLMs for embodied agents</span>
-          <span class="topic-chip">Real-world robustness</span>
-          <span class="topic-chip">Turn-taking and repair</span>
-          <span class="topic-chip">Accessibility-aware design</span>
-          <span class="topic-chip">Evaluation beyond averages</span>
-          <span class="topic-chip">Ethics and deployment</span>
-          <span class="topic-chip">Long-term humanoid roadmaps</span>
-        </div>
-      </div>
-    </section>
+.nav a {
+  color: rgba(255,255,255,0.84);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
 
-    <section class="section call-section" id="cfp">
-      <div class="container call-grid">
-        <div class="call-left">
-          <span class="section-kicker light">Participation</span>
-          <h2>Call for Participation</h2>
-          <p>
-            We invite <strong>1–2 page extended abstracts</strong> in IEEE format. We welcome technical contributions, early-stage ideas, interdisciplinary work, and conceptual perspectives on inclusive humanoid interaction.
-          </p>
-          <div class="call-actions">
-            <a class="btn btn-primary" href="#">Submission Link Coming Soon</a>
-          </div>
-        </div>
+.nav a:hover {
+  color: white;
+}
 
-        <div class="date-card">
-          <h3>Important Dates</h3>
-          <ul>
-            <li><strong>July 15, 2026</strong><span>Submission deadline</span></li>
-            <li><strong>August 1, 2026</strong><span>Acceptance notification</span></li>
-            <li><strong>August 15, 2026</strong><span>Camera-ready deadline</span></li>
-            <li><strong>August 28, 2026</strong><span>Workshop day</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 4.5rem;
+  color: white;
+}
 
-    <section class="section" id="speakers">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Invited Speakers & Panel</span>
-          <h2>Speakers</h2>
-          <p class="section-intro">
-            Perspectives from robotics, linguistics, AI, industry, and sign language research.
-          </p>
-        </div>
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
 
-        <div class="people-grid">
-          <article class="person-card">
-            <div class="avatar">CI</div>
-            <h3>Carlos Ishii</h3>
-            <p class="person-role">RIKEN / ATR</p>
-            <p>Humanoid system perspective.</p>
-          </article>
+.hero-blur {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(30px);
+  opacity: 0.8;
+  pointer-events: none;
+}
 
-          <article class="person-card">
-            <div class="avatar">MB</div>
-            <h3>Mayumi Bono</h3>
-            <p class="person-role">National Institute of Informatics</p>
-            <p>Language and interaction perspective.</p>
-          </article>
+.hero-blur-1 {
+  width: 320px;
+  height: 320px;
+  background: rgba(91, 124, 255, 0.28);
+  top: 50px;
+  left: -40px;
+}
 
-          <article class="person-card">
-            <div class="avatar">TU</div>
-            <h3>Tsubasa Uchida</h3>
-            <p class="person-role">NHK</p>
-            <p>Panelist — sign language research.</p>
-          </article>
+.hero-blur-2 {
+  width: 260px;
+  height: 260px;
+  background: rgba(35, 199, 183, 0.22);
+  top: 20px;
+  right: 60px;
+}
 
-          <article class="person-card">
-            <div class="avatar">SO</div>
-            <h3>Satoshi Okada</h3>
-            <p class="person-role">Hitachi Co. Ltd</p>
-            <p>Panelist — robotics and industry perspective.</p>
-          </article>
+.eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
-          <article class="person-card">
-            <div class="avatar">KF</div>
-            <h3>Kotaro Funakoshi</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Panelist — AI and dialogue systems.</p>
-          </article>
+.hero h1 {
+  margin: 1rem 0 0;
+  font-size: clamp(3.2rem, 10vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
 
-          <article class="person-card">
-            <div class="avatar">NK</div>
-            <h3>Nabeela Khan</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Panel facilitator.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+.hero-subtitle {
+  margin-top: 1rem;
+  max-width: 760px;
+  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+  color: rgba(255,255,255,0.92);
+}
 
-    <section class="section section-alt" id="program">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Schedule</span>
-          <h2>Workshop Program</h2>
-        </div>
+.hero-meta {
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.72);
+  font-weight: 500;
+}
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-time">09:00–09:05</div>
-            <div class="timeline-content">Opening</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-time">09:05–09:35</div>
-            <div class="timeline-content">Invited Talk 1: Carlos Toshinori Ishi</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-time">09:35–10:05</div>
-            <div class="timeline-content">Invited Talk 2: Mayumi Bono</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-time">10:35–10:50</div>
-            <div class="timeline-content">Shotgun presentations</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-time">10:50–11:30</div>
-            <div class="timeline-content">Poster Session + Coffee Break</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-time">11:30–12:30</div>
-            <div class="timeline-content">Panel Discussion: interaction, inclusiveness, and future directions</div>
-          </div>
-        </div>
-      </div>
-    </section>
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
 
-    <section class="section" id="organizers">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Team</span>
-          <h2>Organizers</h2>
-        </div>
+.btn {
+  display: inline-block;
+  padding: 0.95rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
 
-        <div class="people-grid organizers-grid">
-          <article class="person-card small">
-            <div class="avatar">KN</div>
-            <h3>Kazuhiro Nakadai</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Main Organizer</p>
-          </article>
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-          <article class="person-card small">
-            <div class="avatar">BW</div>
-            <h3>Bowen Wu</h3>
-            <p class="person-role">RIKEN</p>
-            <p>Co-Organizer</p>
-          </article>
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #49d8cb);
+  color: #06211e;
+  box-shadow: 0 12px 28px rgba(35, 199, 183, 0.28);
+}
 
-          <article class="person-card small">
-            <div class="avatar">KF</div>
-            <h3>Kotaro Funakoshi</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Co-Organizer</p>
-          </article>
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.15);
+}
 
-          <article class="person-card small">
-            <div class="avatar">KI</div>
-            <h3>Koji Inoue</h3>
-            <p class="person-role">Kyoto University</p>
-            <p>Co-Organizer</p>
-          </article>
+.hero-panel {
+  display: grid;
+  gap: 1rem;
+}
 
-          <article class="person-card small">
-            <div class="avatar">NK</div>
-            <h3>Nabeela Khan</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Co-Organizer</p>
-          </article>
-        </div>
-      </div>
-    </section>
+.mini-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+}
 
-    <section class="section section-alt" id="accessibility">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Inclusion</span>
-          <h2>Accessibility & Inclusion</h2>
-        </div>
+.mini-label {
+  display: block;
+  color: rgba(255,255,255,0.66);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
 
-        <div class="access-grid">
-          <div class="access-card">
-            <h3>Hybrid participation</h3>
-            <p>Hybrid attendance will be supported where feasible to broaden participation.</p>
-          </div>
-          <div class="access-card">
-            <h3>Live captioning</h3>
-            <p>Automatic live captioning will be provided via Zoom or equivalent tools.</p>
-          </div>
-          <div class="access-card">
-            <h3>Diversity-aware design</h3>
-            <p>Diversity among invited speakers and panelists will be actively considered.</p>
-          </div>
-          <div class="access-card">
-            <h3>Cross-community dialogue</h3>
-            <p>We welcome perspectives from robotics, AI, HRI, linguistics, and sign language research.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+.quick-stats {
+  margin-top: -1.3rem;
+  position: relative;
+  z-index: 2;
+}
 
-    <section class="section contact-section" id="contact">
-      <div class="container contact-box">
-        <span class="section-kicker">Contact</span>
-        <h2>Get in touch</h2>
-        <p>For workshop-related inquiries, please contact the organizing team.</p>
-        <a class="contact-link" href="mailto:nabeela@ra.sc.eng.isct.ac.jp">nabeela@ra.sc.eng.isct.ac.jp</a>
-      </div>
-    </section>
-  </main>
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>© 2026 BU-SHI Workshop · IEEE RO-MAN 2026</p>
-      <p>Built with GitHub Pages</p>
-    </div>
-  </footer>
-</body>
-</html>
+.stat-card {
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+.stat-label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.section {
+  padding: 5.2rem 0;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, rgba(91,124,255,0.04), rgba(35,199,183,0.04));
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-kicker {
+  display: inline-block;
+  color: var(--primary-dark);
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.65rem;
+}
+
+.section-kicker.light {
+  color: rgba(255,255,255,0.75);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.section-intro {
+  margin-top: 0.8rem;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.feature-card,
+.person-card,
+.date-card,
+.access-card,
+.contact-box {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(33, 45, 82, 0.08);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.feature-card {
+  padding: 1.45rem;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.topic-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid rgba(91,124,255,0.15);
+  box-shadow: 0 8px 22px rgba(40, 55, 100, 0.07);
+  font-weight: 700;
+  color: #1c2950;
+}
+
+.call-section {
+  background: linear-gradient(135deg, #111933, #1b2450);
+  color: white;
+}
+
+.call-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.call-left h2 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.call-left p {
+  color: rgba(255,255,255,0.85);
+  max-width: 700px;
+}
+
+.call-actions {
+  margin-top: 1.5rem;
+}
+
+.date-card {
+  padding: 1.4rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+}
+
+.date-card h3 {
+  margin-top: 0;
+}
+
+.date-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.date-card li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.date-card li:last-child {
+  border-bottom: none;
+}
+
+.date-card strong {
+  font-size: 1.02rem;
+}
+
+.date-card span {
+  color: rgba(255,255,255,0.72);
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.person-card {
+  padding: 1.3rem;
+}
+
+.person-card.small {
+  text-align: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 900;
+  font-size: 1.05rem;
+  box-shadow: 0 12px 24px rgba(65, 91, 210, 0.22);
+  margin-bottom: 1rem;
+}
+
+.person-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.person-role {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 10px 24px rgba(18, 30, 62, 0.08);
+  border: 1px solid rgba(91,124,255,0.08);
+}
+
+.timeline-time {
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+.timeline-content {
+  font-weight: 600;
+}
+
+.organizers-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.access-card {
+  padding: 1.25rem;
+}
+
+.access-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.contact-section {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.contact-box {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+}
+
+.site-footer {
+  padding: 1.8rem 0;
+  background: #0b1020;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-wrap p {
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .hero-grid,
+  .call-grid,
+  .feature-grid,
+  .stats-grid,
+  .access-grid,
+  .organizers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+
+  .hero,
+  .section {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-grid,
+  .call-grid,
+  .feature-grid,
+  .stats-grid,
+  .people-grid,
+  .organizers-grid,
+  .access-grid,
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    gap: 0.4rem;
+  }
+
+  .quick-stats {
+    margin-top: 0;
+  }
+}
