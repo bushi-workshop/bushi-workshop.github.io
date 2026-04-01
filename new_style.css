@@ -424,3 +424,20 @@ a:hover {
     max-width: 140px;
   }
 }
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.person-card h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.person-card h3 a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
