@@ -102,7 +102,7 @@ a:hover {
 .hero {
   background:
     linear-gradient(rgba(20, 45, 95, 0.72), rgba(20, 45, 95, 0.72)),
-    url("assets/images/workshop_photo.png") center/cover no-repeat;
+    url("workshop_photo.png") center/cover no-repeat;
   color: white;
   padding: 72px 0;
 }
