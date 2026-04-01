@@ -93,10 +93,18 @@ a:hover {
   text-decoration: none;
 }
 
-.hero {
+/* .hero {
   background: #1f3c88;
   color: white;
   padding: 60px 0;
+} */
+
+.hero {
+  background:
+    linear-gradient(rgba(20, 45, 95, 0.72), rgba(20, 45, 95, 0.72)),
+    url("assets/images/workshop_photo.png") center/cover no-repeat;
+  color: white;
+  padding: 72px 0;
 }
 
 .hero-grid {
