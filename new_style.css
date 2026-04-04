@@ -451,10 +451,20 @@ a:hover {
 }
 
 #organizers .person-photo {
-  width: 140px;
-  height: 140px;
-  aspect-ratio: auto;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
   margin: 0 auto 1rem;
-  border-radius: 50%;
-  overflow: hidden;
+}
+
+#organizers .person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+#organizers .person-card {
+  text-align: center;
 }
