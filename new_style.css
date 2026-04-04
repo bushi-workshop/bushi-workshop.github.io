@@ -449,3 +449,12 @@ a:hover {
   color: var(--primary);
   text-decoration: underline;
 }
+
+#organizers .person-photo {
+  width: 140px;
+  height: 140px;
+  aspect-ratio: auto;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
