@@ -515,3 +515,11 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.photo-caption {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--muted);
+  text-align: center;
+}
