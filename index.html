@@ -9,6 +9,68 @@
     content="BU-SHI: Broadening the Users – A Cross-Disciplinary Roadmap for Social Humanoid Interaction, IEEE RO-MAN 2026 Workshop."
   />
   <link rel="stylesheet" href="new_style.css" />
+
+  <style>
+    .invited-speakers-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .invited-speaker-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) 1fr;
+      gap: 2rem;
+      align-items: start;
+      padding: 1.5rem;
+    }
+
+    .speaker-profile .person-photo {
+      margin-bottom: 1rem;
+    }
+
+    .speaker-profile h3,
+    .speaker-profile p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .keynote-details {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .keynote-details h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+    }
+
+    .keynote-details h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .keynote-details h4:first-child {
+      margin-top: 0;
+    }
+
+    .panel-card {
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 760px) {
+      .invited-speaker-card {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .keynote-details {
+        padding-left: 0;
+        padding-top: 1.25rem;
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -166,8 +228,8 @@
           <div class="card">
             <h3>Important Dates</h3>
             <ul class="clean-list">
-              <li><strong>Submission deadline:</strong> July 25, 2026</li>
-              <li><strong>Acceptance notification:</strong> August 5, 2026</li>
+              <li><strong>Submission deadline:</strong> <del>July 15, 2026</del> <strong>Extended to July 25, 2026</strong></li>
+              <li><strong>Acceptance notification:</strong> <del>August 1, 2026</del> <strong>August 5, 2026</strong></li>
               <li><strong>Camera-ready:</strong> August 15, 2026</li>
               <li><strong>Workshop date:</strong> August 28, 2026</li>
             </ul>
@@ -183,59 +245,64 @@
           <h2>Speakers</h2>
         </div>
 
-        <div class="people-grid">
-          <article class="person-card">
-            <div class="person-photo">
-              <img
-                src="assets/images/Carlos1to1.JPG"
-                alt="Carlos Ishii"
-              />
+        <div class="invited-speakers-list">
+          <article class="card invited-speaker-card">
+            <div class="speaker-profile">
+              <div class="person-photo">
+                <img
+                  src="assets/images/Carlos1to1.JPG"
+                  alt="Carlos Ishii"
+                />
+              </div>
+              <h3>
+                <a href="https://dil.atr.jp/~carlos/" target="_blank" rel="noopener noreferrer">
+                  Carlos Ishii
+                </a>
+              </h3>
+              <p class="person-role">RIKEN / ATR</p>
+              <p>Humanoid system perspective.</p>
             </div>
-            <h3>
-              <a href="https://dil.atr.jp/~carlos/" target="_blank" rel="noopener noreferrer">
-                Carlos Ishii
-              </a>
-            </h3>
-            <p class="person-role">RIKEN / ATR</p>
-            <p>Humanoid system perspective.</p>
+
             <div class="keynote-details">
-              <h4>Talk Title</h4>
-              <p><strong>To be announced.</strong></p>
+              <h4>Invited Talk Title</h4>
+              <h3>To be announced.</h3>
               <h4>Abstract</h4>
               <p>The abstract for this invited talk will be announced soon.</p>
             </div>
           </article>
 
-          <article class="person-card">
-            <div class="person-photo">
-              <img
-                src="assets/images/bono1to1.jpg"
-                alt="Mayumi Bono"
-              />
+          <article class="card invited-speaker-card">
+            <div class="speaker-profile">
+              <div class="person-photo">
+                <img
+                  src="assets/images/bono1to1.jpg"
+                  alt="Mayumi Bono"
+                />
+              </div>
+              <p class="photo-caption">From NII Today No.107.</p>
+              <h3>
+                <a href="https://research.nii.ac.jp/~bono/en/index.html" target="_blank" rel="noopener noreferrer">
+                  Mayumi Bono
+                </a>
+              </h3>
+              <p class="person-role">National Institute of Informatics</p>
+              <p>Language and interaction perspective.</p>
             </div>
-            <p class="photo-caption">From NII Today No.107.</p>
-            <h3>
-              <a href="https://research.nii.ac.jp/~bono/en/index.html" target="_blank" rel="noopener noreferrer">
-                Mayumi Bono
-              </a>
-            </h3>
-            <p class="person-role">National Institute of Informatics</p>
-            <p>Language and interaction perspective.</p>
+
             <div class="keynote-details">
-              <h4>Talk Title</h4>
-              <p><strong>To be announced.</strong></p>
+              <h4>Invited Talk Title</h4>
+              <h3>To be announced.</h3>
               <h4>Abstract</h4>
               <p>The abstract for this invited talk will be announced soon.</p>
             </div>
-          </article>
-
-          <article class="person-card">
-            <div class="person-photo placeholder">TBA</div>
-            <h3>Panelists TBA</h3>
-            <p class="person-role">Panel Discussion</p>
-            <p>Additional panelists will be announced soon.</p>
           </article>
         </div>
+
+        <article class="card panel-card">
+          <h3>Panelists TBA</h3>
+          <p class="person-role">Panel Discussion</p>
+          <p>Additional panelists will be announced soon.</p>
+        </article>
 
           <!-- <article class="person-card">
             <div class="person-photo placeholder">Photo</div>
@@ -264,7 +331,6 @@
             <p class="person-role">Institute of Science Tokyo</p>
             <p>Panel facilitator.</p>
           </article> -->
-        </div>
       </div>
     </section>
 
