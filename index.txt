@@ -185,10 +185,14 @@
 
         <div class="people-grid">
           <article class="person-card">
-            <div class="person-photo placeholder">Photo</div>
-            <!-- <h3>Carlos Ishii</h3> -->
+            <div class="person-photo">
+              <img
+                src="assets/images/Carlos1to1.JPG"
+                alt="Carlos Ishii"
+              />
+            </div>
             <h3>
-              <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://dil.atr.jp/~carlos/" target="_blank" rel="noopener noreferrer">
                 Carlos Ishii
               </a>
             </h3>
@@ -197,8 +201,18 @@
           </article>
 
           <article class="person-card">
-            <div class="person-photo placeholder">Photo</div>
-            <h3>Mayumi Bono</h3>
+            <div class="person-photo">
+              <img
+                src="assets/images/bono1to1.jpg"
+                alt="Mayumi Bono"
+              />
+            </div>
+            <p class="photo-caption">From NII Today No.107.</p>
+            <h3>
+              <a href="https://research.nii.ac.jp/~bono/en/index.html" target="_blank" rel="noopener noreferrer">
+                Mayumi Bono
+              </a>
+            </h3>
             <p class="person-role">National Institute of Informatics</p>
             <p>Language and interaction perspective.</p>
           </article>
@@ -289,7 +303,7 @@
           <article class="person-card">
             <div class="person-photo">
               <img
-                src="assets/images/Nakadai Kazuhiro.jpg"
+                src="assets/images/Nakadai_Kazuhiro_1to1_cropped.jpg"
                 alt="Kazuhiro Nakadai"
               />
             </div>
@@ -305,7 +319,7 @@
           <article class="person-card">
             <div class="person-photo">
               <img
-                src="assets/images/Bowen wu.jpg"
+                src="assets/images/Bowen_wu_1to1_cropped.jpg"
                 alt="Bowen Wu"
               />
             </div>
@@ -321,7 +335,7 @@
           <article class="person-card">
             <div class="person-photo">
               <img
-                src="assets/images/kotaro funakoshi.jpg"
+                src="assets/images/kotaro_funakoshi_1to1_cropped.jpg"
                 alt="Kotaro Funakoshi"
               />
             </div>
@@ -337,7 +351,7 @@
           <article class="person-card">
             <div class="person-photo">
               <img
-                src="assets/images/Koji Inoue.jpg"
+                src="assets/images/Koji_Inoue_1to1_cropped.jpg"
                 alt="Koji Inoue"
               />
             </div>
