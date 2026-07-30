@@ -188,7 +188,7 @@
             <div class="person-photo">
               <img
                 src="assets/images/Carlos1to1.JPG"
-                alt="Carlos Ishii"
+                alt="Carlos T. Ishi"
               />
             </div>
             <h3>
