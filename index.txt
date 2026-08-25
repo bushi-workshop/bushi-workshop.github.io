@@ -9,6 +9,68 @@
     content="BU-SHI: Broadening the Users – A Cross-Disciplinary Roadmap for Social Humanoid Interaction, IEEE RO-MAN 2026 Workshop."
   />
   <link rel="stylesheet" href="new_style.css" />
+
+  <style>
+    .invited-speakers-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .invited-speaker-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) 1fr;
+      gap: 2rem;
+      align-items: start;
+      padding: 1.5rem;
+    }
+
+    .speaker-profile .person-photo {
+      margin-bottom: 1rem;
+    }
+
+    .speaker-profile h3,
+    .speaker-profile p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .keynote-details {
+      padding-left: 2rem;
+      border-left: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .keynote-details h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+    }
+
+    .keynote-details h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .keynote-details h4:first-child {
+      margin-top: 0;
+    }
+
+    .panel-card {
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 760px) {
+      .invited-speaker-card {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .keynote-details {
+        padding-left: 0;
+        padding-top: 1.25rem;
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -166,8 +228,8 @@
           <div class="card">
             <h3>Important Dates</h3>
             <ul class="clean-list">
-              <li><strong>Submission deadline:</strong> July 15, 2026</li>
-              <li><strong>Acceptance notification:</strong> August 1, 2026</li>
+              <li><strong>Submission deadline:</strong> <del>July 15, 2026</del> <strong>Extended to July 25, 2026</strong></li>
+              <li><strong>Acceptance notification:</strong> <del>August 1, 2026</del> <strong>August 5, 2026</strong></li>
               <li><strong>Camera-ready:</strong> August 15, 2026</li>
               <li><strong>Workshop date:</strong> August 28, 2026</li>
             </ul>
@@ -183,6 +245,70 @@
           <h2>Speakers</h2>
         </div>
 
+        <div class="invited-speakers-list">
+          <article class="card invited-speaker-card">
+            <div class="speaker-profile">
+              <div class="person-photo">
+                <img
+                  src="assets/images/Carlos1to1.JPG"
+                  alt="Carlos T. Ishi"
+                />
+              </div>
+              <h3>
+                <a href="https://dil.atr.jp/~carlos/" target="_blank" rel="noopener noreferrer">
+                  Carlos T. Ishi
+                </a>
+              </h3>
+              <p class="person-role">RIKEN / ATR</p>
+              <p>Humanoid system perspective.</p>
+            </div>
+
+            <div class="keynote-details">
+              <h4>Invited Talk Title</h4>
+              <h3>Social expression technologies and applications for humanoid robots</h3>
+              <h4>Abstract</h4>
+              <p>In this talk, I will introduce our research activities on analyses of multimodal expressions including speech and non-verbal behaviors in dialogue interactions, and their applications for social robots, including desktop humanoids and android robots.
+Analysis results on the relationships between speech and motion features, and evaluation results on the effects of several modalities including facial expressions, eye-gazing, head and body gestures on the robot's impressions will be presented.
+Some recent results on situation- and user-adapted behaviors will also be presented with some perspectives on future research directions.</p>
+            </div>
+          </article>
+
+          <article class="card invited-speaker-card">
+            <div class="speaker-profile">
+              <div class="person-photo">
+                <img
+                  src="assets/images/bono1to1.jpg"
+                  alt="Mayumi Bono"
+                />
+              </div>
+              <p class="photo-caption">From NII Today No.107.</p>
+              <h3>
+                <a href="https://research.nii.ac.jp/~bono/en/index.html" target="_blank" rel="noopener noreferrer">
+                  Mayumi Bono
+                </a>
+              </h3>
+              <p class="person-role">National Institute of Informatics</p>
+              <p>Language and interaction perspective.</p>
+            </div>
+
+            <div class="keynote-details">
+              <h4>Invited Talk Title</h4>
+              <h3>Beyond Recognition: A Participant-Oriented Approach to Human Interaction for Adaptive Humanoid AI</h3>
+              <h4>Abstract</h4>
+              <p>As humanoid robots increasingly enter homes, schools, healthcare, and public environments, multimodal AI has made remarkable progress in recognizing speech, gestures, gaze, facial expressions, and body movements. Yet a fundamental question remains: What should a robot actually recognize?
+Current multimodal AI generally assumes that human behaviour can be represented by predefined labels serving as ground truth. From the perspective of Conversation Analysis, however, meaningful action is not inherent in observable behaviour itself but is accomplished through participants' orientations, sequential organization, and publicly displayed understanding during interaction. The central challenge for adaptive humanoid AI is therefore not simply improving behavioural recognition, but understanding how people collaboratively construct meaning.
+In this talk, I introduce Relevant Annotation, an interactionally grounded annotation framework that reconceptualizes annotation as a participant-oriented descriptive practice rather than the assignment of observer-defined behavioural categories. Relevant Annotation distinguishes observable bodily movement from participant-relevant action, documenting how embodied conduct becomes meaningful through sequential context, recipient design, and multimodal coordination. I illustrate this perspective through two contrasting interactional cases. While current multimodal large language models successfully interpret actions whose meanings are locally recoverable from visible form, they struggle when understanding depends on participants' ongoing organization of interaction. These cases suggest that what AI currently treats as ground truth often differs fundamentally from what participants themselves demonstrably understand.
+I then extend this discussion to sign language interaction, arguing that sign language offers more than an accessibility application for robotics. It challenges several assumptions inherited from spoken-language research, including discrete turn exchange, stable shared lexical representations, and the view that meaning resides in individual linguistic forms. Drawing on studies of cooperative action in Japanese Sign Language, I show how participants collaboratively construct turns, negotiate reference, and even establish lexical meaning within the unfolding interaction itself. Rather than retrieving fixed representations from an internal lexicon, signers continuously adapt their embodied actions to one another, making meaning a jointly accomplished achievement rather than an individual cognitive product.
+Finally, I present how these ideas are being developed through interdisciplinary projects including the Japanese Sign Language Dialogue Corpus, multimodal annotation, open-vocabulary sign language recognition, and international collaborations supported by JST ASPIRE, the UK–Japan British Council programme, and the Mitsubishi Foundation. I argue that designing humanoid robots for diverse users ultimately requires moving beyond behaviour recognition toward computational models grounded in participants' own organization of interaction.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-heading panel-card">
+          <p class="section-label">Panel Discussion</p>
+          <h3>Panelists</h3>
+        </div>
+
         <div class="people-grid">
           <article class="person-card">
             <div class="person-photo">
@@ -193,11 +319,11 @@
             </div>
             <h3>
               <a href="https://dil.atr.jp/~carlos/" target="_blank" rel="noopener noreferrer">
-                Carlos Ishii
+                Carlos T. Ishi
               </a>
             </h3>
             <p class="person-role">RIKEN / ATR</p>
-            <p>Humanoid system perspective.</p>
+            <p>Panelist</p>
           </article>
 
           <article class="person-card">
@@ -207,51 +333,71 @@
                 alt="Mayumi Bono"
               />
             </div>
-            <p class="photo-caption">From NII Today No.107.</p>
             <h3>
               <a href="https://research.nii.ac.jp/~bono/en/index.html" target="_blank" rel="noopener noreferrer">
                 Mayumi Bono
               </a>
             </h3>
             <p class="person-role">National Institute of Informatics</p>
-            <p>Language and interaction perspective.</p>
+            <p>Panelist</p>
           </article>
 
           <article class="person-card">
-            <div class="person-photo placeholder">TBA</div>
-            <h3>Panelists TBA</h3>
-            <p class="person-role">Panel Discussion</p>
-            <p>Additional panelists will be announced soon.</p>
+            <div class="person-photo">
+              <img
+                src="assets/images/kotaro_funakoshi_1to1_cropped.jpg"
+                alt="Kotaro Funakoshi"
+              />
+            </div>
+            <h3>
+              <a href="https://www.lr.first.iir.isct.ac.jp/~funakoshi/public/en/" target="_blank" rel="noopener noreferrer">
+                Kotaro Funakoshi
+              </a>
+            </h3>
+            <p class="person-role">Institute of Science Tokyo</p>
+            <p>Panelist</p>
           </article>
-        </div>
 
-          <!-- <article class="person-card">
+          <article class="person-card">
+            <div class="person-photo">
+              <img
+                src="assets/images/Koji_Inoue_1to1_cropped.jpg"
+                alt="Koji Inoue"
+              />
+            </div>
+            <h3>
+              <a href="https://inokoj.github.io/" target="_blank" rel="noopener noreferrer">
+                Koji Inoue
+              </a>
+            </h3>
+            <p class="person-role">Kyoto University</p>
+            <p>Panelist</p>
+          </article>
+
+          <article class="person-card">
             <div class="person-photo placeholder">Photo</div>
+            <!-- Add photo here:
+            <div class="person-photo">
+              <img src="assets/images/satoshi_okada.jpg" alt="Satoshi Okada" />
+            </div>
+            -->
+            <h3>Satoshi Okada, Ph.D.</h3>
+            <p class="person-role">Fukushima Decommissioning Engineering Center, Nuclear Engineering and Product Division, Hitachi-GE Nuclear Energy, Ltd.</p>
+            <p>Panelist</p>
+          </article>
+
+          <article class="person-card">
+            <div class="person-photo placeholder">Photo</div>
+            <div class="person-photo placeholder">Photo</div>
+              <img
+                src="assets/images/uchida.jpg"
+                alt="Tsubasa Uchida"
+              />
+            </div>
             <h3>Tsubasa Uchida</h3>
             <p class="person-role">NHK</p>
-            <p>Panelist — sign language research.</p>
+            <p>Panelist</p>
           </article>
-
-          <article class="person-card">
-            <div class="person-photo placeholder">Photo</div>
-            <h3>Satoshi Okada</h3>
-            <p class="person-role">Hitachi Co. Ltd</p>
-            <p>Panelist — robotics and industry perspective.</p>
-          </article>
-
-          <article class="person-card">
-            <div class="person-photo placeholder">Photo</div>
-            <h3>Kotaro Funakoshi</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Panelist — AI and dialogue systems.</p>
-          </article> -->
-
-          <!-- <article class="person-card">
-            <div class="person-photo placeholder">Photo</div>
-            <h3>Nabeela Khan</h3>
-            <p class="person-role">Institute of Science Tokyo</p>
-            <p>Panel facilitator.</p>
-          </article> -->
         </div>
       </div>
     </section>
@@ -265,28 +411,28 @@
 
         <div class="schedule-card">
           <div class="schedule-row">
-            <div class="time">09:00–09:05</div>
+            <div class="time">14:00–14:05</div>
             <div class="event">Opening</div>
           </div>
           <div class="schedule-row">
-            <div class="time">09:05–09:35</div>
-            <div class="event">Invited Talk 1: Carlos Toshinori Ishi</div>
-          </div>
-          <div class="schedule-row">
-            <div class="time">09:35–10:05</div>
-            <div class="event">Invited Talk 2: Mayumi Bono</div>
-          </div>
-          <div class="schedule-row">
-            <div class="time">10:35–10:50</div>
+            <div class="time">14:05–14:20</div>
             <div class="event">Shotgun presentations (1–2 minutes)</div>
           </div>
           <div class="schedule-row">
-            <div class="time">10:50–11:30</div>
-            <div class="event">Poster session + coffee break</div>
+            <div class="time">14:20–14:50</div>
+            <div class="event">Keynote 1: Carlos T. Ishi</div>
           </div>
           <div class="schedule-row">
-            <div class="time">11:30–12:30</div>
+            <div class="time">14:50–15:20</div>
+            <div class="event">Keynote 2: Mayumi Bono</div>
+          </div>
+          <div class="schedule-row">
+            <div class="time">15:20–16:10</div>
             <div class="event">Panel discussion on interaction, inclusiveness, and future directions</div>
+          </div>
+          <div class="schedule-row">
+            <div class="time">16:20–17:00</div>
+            <div class="event">Poster session + Final remarks</div>
           </div>
         </div>
       </div>
